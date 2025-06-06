@@ -49,18 +49,51 @@ body {
 
 
 
-.logo h1 {
-    font-size: 2.2rem;
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logo-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+    transition: all 0.3s ease;
+    background: white;
+    padding: 8px;
+    border: 2px solid rgba(255,255,255,0.3);
+}
+
+.logo-image:hover {
+    transform: scale(1.08) rotate(3deg);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+    border-color: rgba(255,255,255,0.5);
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text h1 {
+    font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 0.25rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    margin: 0;
+    text-shadow: 0 3px 6px rgba(0,0,0,0.25);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
 }
 
 .subtitle {
-    font-size: 0.9rem;
+    font-size: 1rem;
     opacity: 0.9;
     font-weight: 400;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    text-shadow: 0 1px 3px rgba(0,0,0,0.15);
+    margin-top: 0.5rem;
+    line-height: 1.3;
 }
 
 .nav {
@@ -688,12 +721,24 @@ body {
         text-align: center;
     }
 
-    .logo h1 {
-        font-size: 1.8rem;
+    .logo-container {
+        gap: 1.25rem;
+    }
+
+    .logo-image {
+        width: 70px;
+        height: 70px;
+        border-radius: 14px;
+        padding: 6px;
+    }
+
+    .logo-text h1 {
+        font-size: 2.2rem;
+        white-space: nowrap;
     }
 
     .subtitle {
-        font-size: 0.85rem;
+        font-size: 0.95rem;
     }
 
     .nav {
@@ -759,12 +804,38 @@ body {
         line-height: 1;
     }
 
-    .logo h1 {
-        font-size: 1.5rem;
+    .logo-container {
+        gap: 1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo-image {
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        padding: 6px;
+        align-self: center;
+    }
+
+    .logo-text h1 {
+        font-size: 1.8rem;
+        white-space: nowrap;
     }
 
     .subtitle {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo-text h1 {
+        font-size: 1.5rem;
+        white-space: nowrap;
+    }
+
+    .subtitle {
+        font-size: 0.75rem;
     }
 }
 
